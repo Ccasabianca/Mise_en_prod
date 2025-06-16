@@ -6,6 +6,10 @@ app.get('/', (req, res)=> {
     res.send('Hello World');
 });
 
+app.get('/date', (req, res)=>{
+    res.send(`Current date and time : ${new Date()}`);
+});
+
 app.listen(port, ()=>{
 console.log(`Server is running on port ${port}`);
-})
+});
