@@ -53,6 +53,11 @@ app.post('/users', (req, res) => {
     res.status(201).json(newUser);
 });
 
+app.delete('/users/:id', (req, res) => {
+    console.log('user deleted');
+    res.json({ message: 'User deleted' });
+});
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
